@@ -1,0 +1,7 @@
+{
+  "name": "05389004_divisas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
