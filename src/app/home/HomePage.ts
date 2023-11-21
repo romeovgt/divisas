@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
 export class HomePage {
   cantidadQuetzales: number = 0;
   resultado: number = 0; // Inicializa con un valor por defecto
-  tuNumeroDeCarnet: string = ""; // Reemplaza con tu número de carné
 
   convertirDivisa() {
     const tasaCambio = 8;
