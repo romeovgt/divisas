@@ -1,20 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      05389004 Yuly Romeo Velasquez Lopez
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Cantidad en Quetzales</ion-label>
+    <ion-input [(ngModel)]="cantidadQuetzales" type="number"></ion-input>
+  </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button expand="full" (click)="convertirDivisa()">Convertir a Dólares</ion-button>
+
+  <ion-item *ngIf="resultado !== undefined">
+    <ion-label>Resultado en Dólares</ion-label>
+    <ion-text>{{ resultado | currency:'USD':'symbol':'1.2-2' }}</ion-text>
+  </ion-item>
 </ion-content>
